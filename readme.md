@@ -1,5 +1,9 @@
 # SouthernCrossビルドガイド
 
+## 部品
+
+### 付属品
+
 | 品目                    | 数量 |
 | :---------------------- | ---: |
 | PCB                     |  1枚 |
@@ -22,15 +26,18 @@
 | USBケーブル              |  1本 | 100円ショップなど |
 
 
-### 工具
+## 工具
 
 | 品目               | 入手先 |
 | :----------------- | :--- |
 | 温度調整ハンダゴテ | [Amazon](https://www.amazon.co.jp/gp/product/B08L6KJBGP/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B08L6KJBGP&linkCode=as2&tag=swanmatch06-22&linkId=902f31009670f3b7cd79891d00479e72)、ホームセンターなど |
 | 低音はんだ         | 100円ショップなど |
 | ニッパー           | 100円ショップなど |
+| 2液混合接着剤      | 100円ショップなど |
 | ピンセット         | 100円ショップなど |
+| テスター           | [Amazon](https://www.amazon.co.jp/gp/product/B07GJ891VR/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B07GJ891VR&linkCode=as2&tag=swanmatch06-22&linkId=bd42afeb7ff9ca4a61af44a62215c148)、ホームセンターなど |
 
+ピンセット、テスターは必須ではないですが、買っておくことをおすすめします。
 
 ## 組み立て手順
 
@@ -72,13 +79,13 @@ LEDは比較的熱に弱いので、温度調整はんだごてで220℃くら�
 
 ここだけは間違えるとリカバリが面倒なので、**細心の注意**をして作業にあたってください  
 コンスルーの取り付け方は[遊舎工房さんの記事](https://yushakobo.zendesk.com/hc/ja/articles/360044233974-%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%AB%E3%83%BC-%E3%82%B9%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%94%E3%83%B3%E3%83%98%E3%83%83%E3%83%80-%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91%E6%96%B9%E3%82%92%E6%95%99%E3%81%88%E3%81%A6%E4%B8%8B%E3%81%95%E3%81%84)を参考にしてください。  
-また、ProMicroはあらかじめいわゆる[「モゲ対策」](https://scrapbox.io/self-made-kbds-ja/%E3%82%82%E3%81%92%E4%BA%88%E9%98%B2)をしておくといいです。
+また、ProMicroはあらかじめいわゆる[「モゲ対策」](https://scrapbox.io/self-made-kbds-ja/%E3%82%82%E3%81%92%E4%BA%88%E9%98%B2)をしておくことをおすすめします。
 
-コンスルーを差し込みます。
+まず、基板にコンスルーを差し込みます。
 
 ![](./images/06.jpg)
 
-部品が乗っているほうが上になるようにPromicroを乗せます。  
+部品実装面が上になるようにPromicroを乗せます。  
 
 ![](./images/07.jpg)
 
@@ -107,17 +114,17 @@ Via/Remapというアプリケーションを使ってカスタマイズする�
 
 #### VIA/Remapを使う場合。
 
-ファームウェアも[こちら](https://github.com/swanmatch/SouthernCross/releases)に置いておきます。  
-書き込みは[QMK toolbox](https://github.com/qmk/qmk_toolbox/releases)を使うといいです。
+ファームウェアを[こちら](https://github.com/swanmatch/SouthernCross/releases)からダウンロードして、  
+[QMK toolbox](https://github.com/qmk/qmk_toolbox/releases)で書き込むことができます。
 
-VIA対応のファームウェアを書き込んだ場合、[Remap](https://remap-keys.app/)にアクセスすることで、
+VIA対応のファームウェアを書き込んだ場合、GoogleChromeで[Remap](https://remap-keys.app/)にアクセスすることで、
 ドラッグ&ドロップでキーマップを変更できます。
 
 
 #### 自身でビルドして書き込む場合
 
 Repmapでも大概のことは実現できますが、
-複雑なマクロをなどを定義する場合、
+公開しているファームウェアをもとに、
 完全にオリジナルのキーマップを作成することも可能です。
 
 といってもKeymapの定義くらいならそれほど難しくはないです。[こんな](https://github.com/swanmatch/qmk_firmware/blob/southerncross/keyboards/southern_cross/keymaps/default/keymap.c)かんじ。
@@ -148,7 +155,7 @@ make southern_cross:[your_name]:avrdude
 `Detecting USB port, reset your controller now....`という表示になりましたら、
 奥のサイドピン(RESETボタン)を押し込みます。
 
-しばらくすると、書き込みが完了します。
+数秒で書き込みが完了します。
 
 
 ## 完成図
