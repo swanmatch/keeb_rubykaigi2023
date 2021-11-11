@@ -30,14 +30,14 @@
 
 | 品目               | 入手先 |
 | :----------------- | :--- |
-| 温度調整ハンダゴテ | [Amazon](https://www.amazon.co.jp/gp/product/B08L6KJBGP/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B08L6KJBGP&linkCode=as2&tag=swanmatch06-22&linkId=902f31009670f3b7cd79891d00479e72)、ホームセンターなど |
-| 低音はんだ         | 100円ショップなど |
-| ニッパー           | 100円ショップなど |
-| 2液混合接着剤      | 100円ショップなど |
-| ピンセット         | 100円ショップなど |
-| テスター           | [Amazon](https://www.amazon.co.jp/gp/product/B07GJ891VR/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B07GJ891VR&linkCode=as2&tag=swanmatch06-22&linkId=bd42afeb7ff9ca4a61af44a62215c148)、ホームセンターなど |
+| * 温度調整ハンダゴテ | [Amazon](https://www.amazon.co.jp/gp/product/B08L6KJBGP/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B08L6KJBGP&linkCode=as2&tag=swanmatch06-22&linkId=902f31009670f3b7cd79891d00479e72)、ホームセンターなど |
+| * 低音はんだ         | 100円ショップなど |
+| ニッパー             | 100円ショップなど |
+| 2液混合接着剤        | 100円ショップなど |
+| ピンセット           | 100円ショップなど |
+| テスター             | [Amazon](https://www.amazon.co.jp/gp/product/B07GJ891VR/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B07GJ891VR&linkCode=as2&tag=swanmatch06-22&linkId=bd42afeb7ff9ca4a61af44a62215c148)、ホームセンターなど |
 
-ピンセット、テスターは必須ではないですが、買っておくことをおすすめします。
+*印のものは必須で、その他はあったほうが便利なものです。
 
 ## 組み立て手順
 
@@ -69,8 +69,7 @@ LEDは比較的熱に弱いので、温度調整はんだごてで220℃くら�
 
 上部だけ小さいタクトスイッチを使います。
 
-**裏表にはすごく気をつけてください。**  
-裏表間違えるとキーを押し込んだときにキーキャップが干渉する可能性があります。
+裏表間違えるとキーを押し込んだときにキーキャップが干渉する可能性があるので気をつけてください。
 
 ![](./images/05.jpg)
 
@@ -107,19 +106,21 @@ LEDは比較的熱に弱いので、温度調整はんだごてで220℃くら�
 
 ### ファームウェア
 
-ファームウェアの書き込みには、ビルド済みのファームウェアを書き込んで、
-Via/Remapというアプリケーションを使ってカスタマイズする方法と、  
-ソースコードをコピーしてイチから作る方法があります。
+ファームウェアの書き込みには、RemapというWebサイトでカスタマイズする方法と、  
+公開しているソースコードを元にカスタマイズする方法があります。
 
 前者のほうが簡単ですが、後者のほうが柔軟性が高いです。
 
-#### VIA/Remapを使う場合。
+#### VIA/Remapを使う場合
 
-ファームウェアを[こちら](https://github.com/swanmatch/SouthernCross/releases)からダウンロードして、  
-[QMK toolbox](https://github.com/qmk/qmk_toolbox/releases)で書き込むことができます。
-
-VIA対応のファームウェアを書き込んだ場合、GoogleChromeで[Remap](https://remap-keys.app/)にアクセスすることで、
-ドラッグ&ドロップでキーマップを変更できます。
+1. GoogleChromeで[Remap](https://remap-keys.app/catalog/orjR3ZhktvZ6k8I1hMSU)にアクセスします。
+  ![](./images/10.jpg)
+2. 「Firmware」タブからお好みのキーマップを「FLASH」します。
+  ![](./images/11.jpg)
+3. [キーマップ変更ページ](https://remap-keys.app/configure)にアクセスして、「SouthernCross」をペアリングします。
+  ![](./images/12.jpg)
+4. ドラッグ&ドロップでキーマップを変更できます。
+  ![](./images/13.jpg)
 
 
 #### 自身でビルドして書き込む場合
@@ -139,6 +140,8 @@ git clone https://github.com/swanmatch/qmk_firmware.git
 cd qmk_firmware
 make git-submodule
 git checkout southerncross
+
+# 書き込み
 make southern_cross:default:avrdude
 # via対応する場合
 make southern_cross/via/:default:avrdude
@@ -152,9 +155,9 @@ cp keyboards/southern_cross/keymaps/default keyboards/southern_cross/keymaps/[yo
 # 好きなエディタで `keyboards/southern_cross/keymaps/[your_name]/keymap.c`を編集する
 make southern_cross:[your_name]:avrdude
 ```
--
-`Detecting USB port, reset your controller now....`という表示になりましたら、
-奥のサイドピン(RESETボタン)を押し込みます。
+
+`Detecting USB port, reset your controller now...`という表示になりましたら、
+奥のサイドボタン(RESETボタン)を押し込みます。
 
 数秒で書き込みが完了します。
 
