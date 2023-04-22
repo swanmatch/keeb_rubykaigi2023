@@ -28,7 +28,7 @@ RubyKaigi 2023で配布するマイクロパッド。
 
 | 品目                     | 数量 | 入手先 |
 | :----------------------- | ---: | :----- |
-| XIAO RP2040              |  1個 | [talpkeyboard)](https://talpkeyboard.net/items/63534f58f5197322fceb6487)<br>[秋月電子](https://akizukidenshi.com/catalog/g/gM-17044/) |
+| XIAO RP2040              |  1個 | [talpkeyboard](https://talpkeyboard.net/items/63534f58f5197322fceb6487)<br>[秋月電子](https://akizukidenshi.com/catalog/g/gM-17044/) |
 | 7ピン ピンヘッダ(*1)     |  2本 | [遊舎工房](https://shop.yushakobo.jp/products/3696?_pos=2&_sid=62c590295&_ss=r&variant=42476836946151)<br>[秋月電子](https://akizukidenshi.com/catalog/g/gC-00167/) |
 | MX互換スイッチ(5pin推奨) |  4個 | [遊舎工房](https://shop.yushakobo.jp/collections/all-switches)<br>[talpkeyboard](https://talpkeyboard.net/?category_id=59cf8860ed05e668db003f5d) |
 | 1Uキーキャップ           |  4個 | [遊舎工房](https://shop.yushakobo.jp/collections/keycaps/products/dsa-blank-keycaps)<br>[talpkeyboard](https://talpkeyboard.net/?category_id=59e2acfaed05e644fd004008) |
@@ -40,17 +40,14 @@ RubyKaigi 2023で配布するマイクロパッド。
 
 ## 工具
 
-| 品目                 | 入手先 |
-| :------------------- | :----- |
-| * 温度調整ハンダゴテ | [Amazon](https://www.amazon.co.jp/gp/product/B08L6KJBGP/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B08L6KJBGP&linkCode=as2&tag=swanmatch06-22&linkId=902f31009670f3b7cd79891d00479e72)、ホームセンターなど |
-| * 低温はんだ         | 100円ショップなど |
-| * ピンセット         | 100円ショップなど |
-| * マスキングテープ   | 100円ショップなど |
-| ニッパー             | 100円ショップなど |
-| 2液混合接着剤        | 100円ショップなど |
-| テスター             | [Amazon](https://www.amazon.co.jp/gp/product/B07GJ891VR/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B07GJ891VR&linkCode=as2&tag=swanmatch06-22&linkId=bd42afeb7ff9ca4a61af44a62215c148)、ホームセンターなど |
-
-*印のものは必須で、その他はあったほうが便利なものです。
+| 品目               | 入手先 |
+| :----------------- | :----- |
+| 温度調整ハンダゴテ | [Amazon](https://www.amazon.co.jp/gp/product/B08L6KJBGP/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B08L6KJBGP&linkCode=as2&tag=swanmatch06-22&linkId=902f31009670f3b7cd79891d00479e72)、ホームセンターなど |
+| 低温はんだ         | 100円ショップなど |
+| ピンセット         | 100円ショップなど |
+| マスキングテープ   | 100円ショップなど |
+| ニッパー           | 100円ショップなど |
+| テスター (トラブル時に必要) | [Amazon](https://www.amazon.co.jp/gp/product/B07GJ891VR/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B07GJ891VR&linkCode=as2&tag=swanmatch06-22&linkId=bd42afeb7ff9ca4a61af44a62215c148)、ホームセンターなど |
 
 ## 組み立て手順
 
@@ -106,7 +103,7 @@ RP2040を差し込みます。**(RP2040のはんだ付けはまだしないこ�
 ![](./images/07.jpg)
 
 マスキングテープで仮止めします。  
-(仮止めできればなんでもいいかもだけど熱で溶けそうなのでセロハンテープはあんまりよくなさそう。)
+(仮止めできればなんでもいいのですが、セロハンテープは熱で溶けそうなのであまりよくないと思います。)
 
 ある程度きちんと固定しておかないと、ピンヘッダが基板に対して垂直にならず、
 最悪あとでRP2040がはまらない悲しいことになります。
