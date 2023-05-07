@@ -22,7 +22,7 @@ Large LED (WS2812B) | 1 piece
 M2L7 round spacer | 3
 M2L4 screw | 6
 Tact switch (large) | Four
-rubber foot | 4個
+rubber foot | 4
 
 ### Items required separately
 
