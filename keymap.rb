@@ -8,7 +8,7 @@ kbd.init_direct_pins([
 ])
 
 kbd.add_layer :default, %i[
-  COPY           RAILS    CONSOLE    PASTE
+  WIN_L          RAILS    CONSOLE    WIN_R
   BKSP_LEFT      BUNDLE   RAKE       DEL_RIGHT
 ]
 
@@ -34,6 +34,8 @@ kbd.define_mode_key :UNDO,   [ %i[KC_RCTL KC_Z], nil, 200, 200 ]
 kbd.define_mode_key :REDO,   [ %i[KC_RCTL KC_Y], nil, 200, 200 ]
 kbd.define_mode_key :COPY,   [ %i[KC_RCTL KC_C], nil, 200, 200 ]
 kbd.define_mode_key :PASTE,  [ %i[KC_RCTL KC_V], nil, 200, 200 ]
+kbd.define_mode_key :WIN_R,  [ Proc.new { kbd.send_key :KC_LALT, :KC_LCTL, :KC_RIGHT }, nil, 200, nil ]
+kbd.define_mode_key :WIN_L,  [ Proc.new { kbd.send_key :KC_LALT, :KC_LCTL, :KC_LEFT  }, nil, 200, nil ]
 
 # when tap any key, and Hold move layer
 kbd.define_mode_key :BKSP_LEFT,    [ :KC_LEFT,  :left,  200, 200 ]
