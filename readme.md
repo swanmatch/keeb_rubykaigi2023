@@ -1,5 +1,7 @@
 # RubyKaigi 2023 ノベルティキーボード ビルドガイド
 
+**[English page is Here](./readme_en.md)**
+
 ## 概要
 
 RubyKaigi 2023で配布するマイクロパッド。  
